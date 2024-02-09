@@ -24,10 +24,10 @@ Usᴇ Help ғᴏʀ ᴍᴏʀᴇ ᴄᴏᴍᴍᴀɴᴅs. 🎶
 async def start(client, message):
     buttons = [
         [
-            InlineKeyboardButton("⦿ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ⦿", url="https://t.me/{BOT_USERNAME}?startgroup=true")
+            InlineKeyboardButton("⦿ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ⦿", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-            InlineKeyboardButton("⦿ɢʀᴏᴜᴘ⦿", url="https://t.me/SUPPORT"),
+            InlineKeyboardButton("⦿ɢʀᴏᴜᴘ⦿", url=f"https://t.me/{SUPPORT}"),
             InlineKeyboardButton("⦿ᴏᴡɴᴇʀ⦿", user_id=OWNER_ID)
         ]
     ]
