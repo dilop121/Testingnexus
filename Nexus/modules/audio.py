@@ -1,3 +1,11 @@
+#from pytgcalls.types import AudioPiped, AudioVideoPiped, AudioQuality, AudioParameters
+
+from pytgcalls.types.input_stream import InputStream
+from pytgcalls.types.input_stream import InputAudioStream
+
+from pytgcalls.types import *
+
+
 import os, aiofiles, aiohttp, ffmpeg, random, textwrap, re
 import numpy as np
 import requests
@@ -15,14 +23,13 @@ from pyrogram.errors import UserAlreadyParticipant
 from Nexus.Helper.requirements import get_url, get_file_name, admins as a, set_admins as set
 from Nexus.Helper import requirements as rq
 from Nexus.Helper.errors import DurationLimitError
-from Nexus.Helper.requirements import get_audio_stream
+from Nexus.Helper.requirements import get_video_stream
 from pytgcalls.types import Update
-#from pytgcalls.types import AudioPiped, AudioVideoPiped, AudioQuality, AudioParameters
+from pytgcalls.types import AudioVideoPiped
 
-from pytgcalls.types.input_stream import InputStream
-from pytgcalls.types.input_stream import InputAudioStream
 
-from pytgcalls.types import *
+
+#----------------
 
 DURATION_LIMIT = 300
 
