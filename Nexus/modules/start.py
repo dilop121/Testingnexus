@@ -76,21 +76,5 @@ async def start(_, message):
         caption=START_TEXT.format(message.from_user.mention, message.from_user.id),
         reply_markup=button
     )
-    
-@Nexus.on_callback_query(filters.regex("^help_"))
-async def help_callback(_, query):
-    await query.message.reply_photo(
-        photo=random.choice(NEXUS_PIC),
-        caption=HELP_TEXT.format(query.from_user.mention, query.from_user.id) 
-    )
 
-@Nexus.on_message(filters.private & filters.incoming)
-async def on_pm_s(client: Client, message: Message):
-    if not message.from_user.id ==OWNER_ID:
-        fwded_mesg = await message.forward(chat_id=OWNER_ID, disable_notification=True)
-
-# ------------------------------------------------------------------------------- #
-
-
-
-
+# --------------------
