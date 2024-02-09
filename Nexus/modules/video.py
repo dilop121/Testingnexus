@@ -21,7 +21,7 @@ from pytgcalls.types import AudioVideoPiped
 
 
 
-DURATION_LIMIT = 300
+DURATION_LIMIT = 170000
 
 keyboard = InlineKeyboardMarkup(
         [
