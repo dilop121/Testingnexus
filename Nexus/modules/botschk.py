@@ -4,7 +4,7 @@ from pyrogram import filters
 from Nexus import Nexus, userbot
 from config import SUDO_USERS
 
-BOT_LIST = ["YumikooBot", "NexikoBot" , "DAXXTEAMBOT" , "STRINGSEASO_NBOT"]
+BOT_LIST = ["IAM_DAXXBOT", "NexikoBot" , "GitWizardBot" , "stringseasonrobot" , "LivioXBot"]
 
 
 
