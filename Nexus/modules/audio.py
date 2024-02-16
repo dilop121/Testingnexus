@@ -312,12 +312,13 @@ async def play(_, message: Message):
        
     else:
         await pytgcalls.join_group_call(
-            chat_id,
-            InputAudioStream(
-                file_path,
-                InputStream.from_quality(InputAudioStream.STUDIO),
-            ),
-        )
+    chat_id,
+    InputAudioStream(
+        file_path,
+        InputStream.both(),
+    ),
+)
+
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
@@ -436,7 +437,6 @@ async def stop(_, msg):
 
 
 # --------------------------------------------------------------------------------------------------------- #
-
 
 @Nexus.on_message(filters.command(["leavevc"], prefixes=["/", "!"]))    
 async def leavevc(_, msg):
