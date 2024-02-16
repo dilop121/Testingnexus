@@ -313,9 +313,9 @@ async def play(_, message: Message):
     else:
         await pytgcalls.join_group_call(
             chat_id,
-            AudioPiped(
+            InputAudioStream(
                 file_path,
-                AudioParameters.from_quality(AudioQuality.STUDIO),
+                AudioParameters.from_quality(InputAudioStream.STUDIO),
             ),
         )
         await message.reply_photo(
