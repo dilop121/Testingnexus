@@ -315,7 +315,7 @@ async def play(_, message: Message):
             chat_id,
             InputAudioStream(
                 file_path,
-                AudioParameters.from_quality(InputAudioStream.STUDIO),
+                InputStream.from_quality(InputAudioStream.STUDIO),
             ),
         )
         await message.reply_photo(
