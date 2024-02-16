@@ -315,9 +315,10 @@ async def play(_, message: Message):
     chat_id,
     InputAudioStream(
         file_path,
-        InputStream.both(),
+        AudioVideoPiped(),
     ),
 )
+
 
         await message.reply_photo(
             photo="final.png",
